@@ -13,17 +13,17 @@ def create_new_file(filename, average_length):
                 next_line = next(file, None) 
                 if next_line is not None:
                     
-                    if len(next_line.strip()) > average_length:
+                    if len(next_line.strip()) >= average_length:
                         
-                        output_file.write(line)
+                        ##output_file.write(line)
                         output_file.write(next_line[:int(average_length)] + '\n')
 
                     else:
                         #skip both lines
                         continue
-                else:
+                ##else:
                     # If there is no next line, just write the odd line
-                    output_file.write(line[:int(average_length)] + '\n')
+                    ##output_file.write(line[:int(average_length)] + '\n')
                 
 
 
